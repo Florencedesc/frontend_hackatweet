@@ -2,11 +2,14 @@ import React from 'react'
 import Head from 'next/head'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCat} from '@fortawesome/free-solid-svg-icons';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from '../../styles/Home.module.css'
 import SignIn from '../loginTasks/SignIn';
 import SignUp from '../loginTasks/SignUp';
+import Search from '../_shared/Search';
 
 function Home() {
+  const user = useSelector((state) => state.user.value);
   return (
     <div>
      <Head>
@@ -18,13 +21,16 @@ function Home() {
         <div className={styles.containerUser}>
           <img src="/image/user1.jpeg" alt="Logo" className={styles.imgUser} />
           <div>
-            <h2>Bernard</h2>
-            <p>Hastalabista</p>
+            <h2>{user.username}</h2>
+            <p>{user.token.lastname}</p>
           </div>
         </div>
         </aside>
         <main className={styles.profilMain}>
-            <h1>Home</h1>
+         <Search />
+          <div>
+
+          </div>
         </main>
         <aside className={styles.profilHash}>
           <h1>Trends</h1>
