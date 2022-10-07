@@ -27,6 +27,7 @@ function Home() {
         </div>
         </aside>
         <main className={styles.profilMain}>
+          <h3 style={{margin: "20px", fontSize: "25px"}}>Home</h3>
          <Search />
           <div>
 

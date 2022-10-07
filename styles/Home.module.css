@@ -12,7 +12,7 @@
     grid-auto-rows: minmax(100vh, auto);
 }
 .profilLeft {
-    background-color: rgb(125, 206, 179);
+    background-color: rgb(0, 31, 13);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,7 +21,7 @@
     border-right: 4px solid rgb(255, 221, 190);
 }
 .profilMain {
-    background-color: rgb(173, 24, 151);
+    background-color: rgb(0, 31, 13);
     grid-column: 3 /7 ;
     grid-row: 1;
     border-right: 4px solid rgb(255, 221, 190);
@@ -33,7 +33,7 @@
     color:rgb(255, 221, 190);
 }
 .profilHash {
-    background-color: rgb(206, 91, 34);
+    background-color: rgb(0, 31, 13);
     grid-column: 7 / 10;
     grid-row: 1;
 }
@@ -67,12 +67,32 @@
 
 /* ******* Search ********** */
 .containerSearch {
-    background-color: aqua;
     width: 100%;
-    height: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+    border-bottom: 2px solid rgb(255, 221, 190);
 }
-
+.form{
+    width: 100%;
+    text-align: center;
+}
 .search {
     width: 80%;
-    height: 45px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    padding: 20px;
+}
+
+.btnTweet {
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: rgb(149, 227, 230);
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
 }
