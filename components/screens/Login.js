@@ -6,22 +6,26 @@ import {faCat} from '@fortawesome/free-solid-svg-icons';
 import SignIn from "../loginTasks/SignIn";
 import SignUp from "../loginTasks/SignUp";
 import LoginBtn from "../_shared/LoginBtn";
+import Modal from 'react-modal';
+
 
 
 function Login() {
 
-
-
   const [modalIsOpen, setIsOpen] = React.useState(false);
-  
+  const [modalIsOpenUp, setIsOpenUp] = React.useState(false);
+
   function openModal() {
     setIsOpen(true);
   }
+  function openModalUp() {
+    setIsOpenUp(true);
+  }
 
-  
+  Modal.setAppElement(document.getElementById('root'));
 
   return (
-    <div>
+    <div id="root">
       <Head>
         <title>Login</title>
       </Head>
@@ -37,12 +41,11 @@ function Login() {
               <h2>Signup today and get a free ice-cream </h2>
             </div>
             <div className={styles.containerBtn}>
-              <LoginBtn text="Sign up"/>
-              <LoginBtn text="Sign in"/>
+              <LoginBtn text="Sign up" setIsOpen={openModalUp}/>
+              <LoginBtn text="Sign in" setIsOpen={openModal}/>
             </div>
           </div>
-          <button onClick={() => openModal()}>Open</button>
-          <SignUp setIsOpen={setIsOpen} modalIsOpen={modalIsOpen}/>
+          <SignUp setIsOpen={setIsOpenUp} modalIsOpen={modalIsOpenUp}/>
           <SignIn setIsOpen={setIsOpen} modalIsOpen={modalIsOpen}/>
         </aside>
      </main>

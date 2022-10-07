@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from '../../styles/Login.module.css'
 
-function LoginBtn({text}) {
+function LoginBtn({text, onClick, setIsOpen }) {
+
+  
   return (
     <div>
-        <button className={styles.button}>{text}</button>
+        <button onClick={() => setIsOpen()} className={styles.button}>{text}</button>
     </div>
-    
   )
 }
 

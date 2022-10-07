@@ -1,5 +1,10 @@
 import React from 'react'
+import Head from 'next/head'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCat} from '@fortawesome/free-solid-svg-icons';
 import styles from '../../styles/Home.module.css'
+import SignIn from '../loginTasks/SignIn';
+import SignUp from '../loginTasks/SignUp';
 
 function Home() {
   return (
@@ -7,31 +12,24 @@ function Home() {
      <Head>
         <title>Home</title>
       </Head>
-     <main className={styles.container}>
-        <aside className={styles.asideLeft} >
+      <div className={styles.container}>
+        <aside className={styles.profilLeft}>
+        <FontAwesomeIcon icon={faCat} alt="Logo" className={styles.logo} />
+        <div className={styles.containerUser}>
+          <img src="/image/user1.jpeg" alt="Logo" className={styles.imgUser} />
           <div>
-            <p className={styles.logo}  >Logo</p>
+            <h2>Bernard</h2>
+            <p>Hastalabista</p>
           </div>
-          <div>
-            <p className={styles.profil}  >Profil</p>
-          </div>
+        </div>
         </aside>
-        <aside className={styles.asideCenter} >
+        <main className={styles.profilMain}>
+            <h3>Hello</h3>
+        </main>
+        <aside className={styles.profilHash}>
+          <h4>Right</h4>
         </aside>
-        <aside className={styles.asideRight}>
-          <div className={styles.containerLogin}>
-            <p className={styles.logo}  >Logo</p>
-            <div>
-              <h1>Welcome to Kelton and Florence's Social Network</h1>
-              <h2>Signup today and get a free ice-cream </h2>
-            </div>
-            <div className={styles.containerBtn}>
-                <SignIn/>
-                <SignUp/>
-            </div>
-          </div>
-        </aside>
-     </main>
+      </div>
     </div>
   );
 }

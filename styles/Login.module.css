@@ -76,3 +76,27 @@
      .modal {
         background-color: brown;
      }
+
+.formSignin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formSignup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+.usernameStyle {
+    padding: 8px 0;
+    width: 60%;
+    margin-bottom: 10px;
+}
+.passwordStyle {
+    padding: 8px 0;
+    width: 60%;
+}
