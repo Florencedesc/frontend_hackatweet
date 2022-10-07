@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout } from '../../reducers/users';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faAlignCenter, faXmark} from '@fortawesome/free-solid-svg-icons';
 
 function SignUp({modalIsOpen, setIsOpen}) {
   const dispatch = useDispatch();
@@ -38,10 +40,15 @@ function SignUp({modalIsOpen, setIsOpen}) {
         content: {
           top: '50%',
           left: '50%',
+          width: '500px',
+          height: '500px',
+          textAlign: 'center',
           right: 'auto',
           bottom: 'auto',
           marginRight: '-50%',
           transform: 'translate(-50%, -50%)',
+          borderRadius: '20px',
+          backgroundColor: 'rgb(255, 221, 190)',
         },
       };
 
@@ -65,15 +72,15 @@ function SignUp({modalIsOpen, setIsOpen}) {
             style={customStyles}
             contentLabel="Example Modal">
             <div>
-              <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello SignIn</h2>
-              <button onClick={closeModal}>close</button>
+              <h2 className={styles.welcomeBack} ref={(_subtitle) => (subtitle = _subtitle)}>Rejoignez-Nous!</h2>
+              <FontAwesomeIcon onClick={closeModal} icon={faXmark} alt="Exit" className={styles.cross} />
             </div>
             <form className={styles.formSignup}>
               <input className={styles.usernameStyle} type="text" placeholder="lastname" id="signUpLastname" onChange={(e) => setSignUpLastname(e.target.value)} value={signUpLastname} />
               <input className={styles.usernameStyle} type="text" placeholder="username" id="signUpUsername" onChange={(e) => setSignUpUsername(e.target.value)} value={signUpUsername} />
               <input className={styles.usernameStyle} type="password" placeholder="Password" id="signUpPassword" onChange={(e) => setSignUpPassword(e.target.value)} value={signUpPassword} />
             </form>
-              <button onClick={() => handleInscription()}>Inscription</button>
+              <button className={styles.button} onClick={() => handleInscription()}>Inscription</button>
         </Modal>
     </div>
   )

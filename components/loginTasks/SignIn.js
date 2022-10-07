@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout } from '../../reducers/users';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faAlignCenter, faXmark} from '@fortawesome/free-solid-svg-icons';
 
 function SignIn({modalIsOpen, setIsOpen}) {
   const dispatch = useDispatch();
@@ -35,11 +37,15 @@ function SignIn({modalIsOpen, setIsOpen}) {
         content: {
           top: '50%',
           left: '50%',
-          width: '400px',
+          width: '500px',
+          height: '500px',
+          textAlign: 'center',
           right: 'auto',
           bottom: 'auto',
           marginRight: '-50%',
           transform: 'translate(-50%, -50%)',
+          borderRadius: '20px',
+          backgroundColor: 'rgb(255, 221, 190)',
         },
       };
 
@@ -64,15 +70,16 @@ function SignIn({modalIsOpen, setIsOpen}) {
             style={customStyles}
             contentLabel="Example Modal">
             <div>
-              <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello SignIn</h2>
-              <button onClick={closeModal}>close</button>
+              <h2 className={styles.welcomeBack} ref={(_subtitle) => (subtitle = _subtitle)}>Ravis de vous revoir!</h2>
+              <FontAwesomeIcon onClick={closeModal} icon={faXmark} alt="Exit" className={styles.cross} />
             </div>
             <form className={styles.formSignin}>
               <input className={styles.usernameStyle} type="text" placeholder="Username" id="signInUsername" onChange={(e) => setSignInUsername(e.target.value)} value={signInUsername} />
               <input className={styles.usernameStyle} type="password" placeholder="Password" id="signInPassword" onChange={(e) => setSignInPassword(e.target.value)} value={signInPassword} />
             </form>
-              <button onClick={handleConnection}>Connexion</button>
+              <button className={styles.button} onClick={handleConnection}>Connexion</button>
         </Modal>
+        
     </div>
     
   )
