@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCat, faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -11,6 +11,9 @@ import Link from "next/link";
 
 function Hashtag() {
   const user = useSelector((state) => state.user.value);
+
+  const [likeCount, setlikeCount] = useState(0);
+
   return (
     <div>
       <Head>
@@ -46,8 +49,8 @@ function Hashtag() {
             </div>
             <p>contenu du tweet a puller</p>
             <div className={styles.likeCount}>
-              <FontAwesomeIcon className={styles.logoHeart} icon={faHeart} alt="Logo"/>
-              <p> compteur de likes</p>
+              <FontAwesomeIcon className={styles.logoHeart} icon={faHeart} alt="Logo"onClick={() => setlikeCount(likeCount +1)}/>
+              <p> {likeCount}</p>
             </div>
           </div>
         </main>
