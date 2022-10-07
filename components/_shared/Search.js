@@ -8,7 +8,10 @@ function Search() {
         <form className={styles.form}>
             <input className={styles.search} types="text" placeholder="Search..." />
         </form>
-        <button className={styles.btnTweet}>Tweet</button>
+        <div className={styles.containerCount}>
+            <p>Count</p>
+            <button className={styles.btnTweet}>Tweet</button>
+        </div>
     </div>
   )
 }
