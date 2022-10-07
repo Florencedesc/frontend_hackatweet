@@ -24,10 +24,10 @@ function Home() {
         </div>
         </aside>
         <main className={styles.profilMain}>
-            <h3>Hello</h3>
+            <h1>Home</h1>
         </main>
         <aside className={styles.profilHash}>
-          <h4>Right</h4>
+          <h1>Trends</h1>
         </aside>
       </div>
     </div>
