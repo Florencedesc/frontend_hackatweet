@@ -95,8 +95,10 @@
 .btnTweet {
     padding: 10px 30px;
     border-radius: 50px;
-    background-color: rgb(149, 227, 230);
+    background-color: rgb(255, 221, 190);
+    border: 3px solid rgb(3, 39, 3);
+    color:  rgb(14, 83, 14);
     border: none;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
 }
