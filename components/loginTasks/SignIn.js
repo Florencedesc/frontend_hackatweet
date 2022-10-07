@@ -24,7 +24,7 @@ function SignIn({modalIsOpen, setIsOpen}) {
 		}).then(response => response.json())
 			.then(data => {
 				if (data.result) {
-					dispatch(login({username: signInUsername, token: data.token }));
+					dispatch(login({lastname: data.lastname, username: signInUsername, token: data.token }));
 					setSignInUsername('');
 					setSignInPassword('');
           setIsOpen(false);
