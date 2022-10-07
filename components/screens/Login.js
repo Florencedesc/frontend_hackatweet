@@ -33,7 +33,7 @@ function Login() {
         </aside>
         <aside className={styles.asideRight}>
           <div className={styles.containerLogin}>
-            <FontAwesomeIcon className={styles.logo} icon={faCat} alt="Logo" className={styles.logo} />
+            <FontAwesomeIcon className={styles.logo} icon={faCat} alt="Logo"/>
             <div>
               <h1>Welcome to Kelton and Florence's Social Network</h1>
               <h2>Signup today and get a free ice-cream </h2>
