@@ -38,6 +38,10 @@ function Home() {
         </main>
         <aside className={styles.profilHash}>
           <h1>Trendy</h1>
+          <div className={styles.hashContainer}>
+            <h2>#topTrends </h2>
+            <h3>(number of)Tweet</h3>
+          </div>
         </aside>
       </div>
     </div>
