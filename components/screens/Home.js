@@ -7,6 +7,7 @@ import styles from '../../styles/Home.module.css'
 import SignIn from '../loginTasks/SignIn';
 import SignUp from '../loginTasks/SignUp';
 import Search from '../_shared/Search';
+import Link from 'next/link';
 
 function Home() {
   const user = useSelector((state) => state.user.value);
@@ -17,7 +18,9 @@ function Home() {
       </Head>
       <div className={styles.container}>
         <aside className={styles.profilLeft}>
-        <FontAwesomeIcon icon={faCat} alt="Logo" className={styles.logo} />
+        
+          <Link href="/home"><FontAwesomeIcon className={styles.logo} icon={faCat} alt="Logo"/></Link>
+        
         <div className={styles.containerUser}>
           <img src="/image/user1.jpeg" alt="Logo" className={styles.imgUser} />
           <div>
@@ -34,7 +37,7 @@ function Home() {
           </div>
         </main>
         <aside className={styles.profilHash}>
-          <h1>Trends</h1>
+          <h1>Trendy</h1>
         </aside>
       </div>
     </div>
